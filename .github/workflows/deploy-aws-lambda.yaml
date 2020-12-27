@@ -25,4 +25,4 @@ jobs:
           aws-region: ap-south-1
       - name: Serverless Deploy
         # run: npm run-script deploy
-        run: serverless deploy
+        run: npm serverless deploy
