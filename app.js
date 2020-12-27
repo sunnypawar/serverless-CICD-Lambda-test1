@@ -5,7 +5,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get('/api/info', (req, res) => {
-  res.send({ application: 'Sunny_sample-app-1', version: '1.0' });
+  res.send({ application: 'Sunny_sample-app-dev-commit', version: '1.0' });
 });
 app.post('/api/v1/getback', (req, res) => {
   res.send({ ...req.body });
