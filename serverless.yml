@@ -1,9 +1,9 @@
-service: serverless-CICD-Lambda-test-prod
+service: serverless-CICD-Lambda-dev
 provider:
   name: aws
   runtime: nodejs10.x
   AutoPublishAlias: live
-  stage: prod
+  stage: dev
   region: ap-south-1
   memorySize: 128 
 functions:
