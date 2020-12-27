@@ -1,8 +1,8 @@
-name: deploy-aws-lambda
+name: deploy-aws-lambda-prod
 on:
   push:
     branches:
-      - master
+      - prod
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,6 +25,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
+      - name: prepare-serverless-deploy
+        run: mv serverless-prod.yml serverless.yml          
       - name: Serverless Deploy
         # run: npm run-script deploy
         run: sls deploy

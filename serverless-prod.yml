@@ -1,4 +1,4 @@
-service: serverless-CICD-Lambda-test1
+service: serverless-CICD-Lambda-prod
 provider:
   name: aws
   runtime: nodejs10.x
