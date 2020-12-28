@@ -7,7 +7,7 @@ provider:
   region: ap-south-1
   memorySize: 128 
   environment:
-    MONGODB_URL: ${{ secrets.MONGODB_URL }}
+    MONGODB_URL: 'hellomongodb1'
     SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
     JWT_SECRET: ${{ secrets.JWT_SECRET }}   
 functions:
