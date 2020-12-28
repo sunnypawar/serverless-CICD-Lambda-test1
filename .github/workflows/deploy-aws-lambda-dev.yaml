@@ -4,7 +4,7 @@ on:
     branches:
       - master
 # env: 
-#   MONGODB_URL: 'hellomongodb2'
+#   MONGODB_URL: 'hellomongodb2' 
 #   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 #   JWT_SECRET: ${{ secrets.JWT_SECRET }}      
 jobs:
