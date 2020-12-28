@@ -19,6 +19,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Create env file
+        run: | 
+          cat > env.yml << EOF
+          ${{ secrets.ENV }}
+          EOF
       - name: Install Serverless Framework
         run: npm install -g serverless          
       - name: Install Dependencies

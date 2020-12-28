@@ -1,4 +1,7 @@
 service: serverless-CICD-Lambda-dev
+custom:
+    environment: ${file(env.yml):default}
+
 provider:
   name: aws
   runtime: nodejs10.x
@@ -8,7 +11,7 @@ provider:
   memorySize: 128 
   environment:
     MONGODB_URL: 'hellomongodb1'
-    SENDGRID_API_KEY: ${file(SENDGRID_API_KEY.yml):default}
+    SENDGRID_API_KEY: ${self:custom.environment.SENDGRID_API_KEY}
     JWT_SECRET: ${{ secrets.JWT_SECRET }}   
 functions:
   app:
