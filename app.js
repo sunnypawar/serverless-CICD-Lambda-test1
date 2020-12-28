@@ -30,4 +30,8 @@ app.use(taskRouter)
 //   res.send({ application: 'Sunny_sample-app-2802', version: '1.0' });
 // });
 
+// app.listen(3000,() => {
+//   console.log('server is up on ' + 3000)
+// })
+
 module.exports.handler = serverless(app);
