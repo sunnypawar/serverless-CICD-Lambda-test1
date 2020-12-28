@@ -26,8 +26,8 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-app.get('/api/info', (req, res) => {
-  res.send({ application: 'Sunny_sample-app-2802', version: '1.0' });
-});
+// app.get('/api/info', (req, res) => {
+//   res.send({ application: 'Sunny_sample-app-2802', version: '1.0' });
+// });
 
 module.exports.handler = serverless(app);
