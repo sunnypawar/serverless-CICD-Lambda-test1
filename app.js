@@ -18,13 +18,13 @@ const express = require('express')
 require('./db/mongoose')
 
 const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
+// const taskRouter = require('./routers/task')
 
 const app = express()
 
 app.use(express.json())
 app.use(userRouter)
-app.use(taskRouter)
+// app.use(taskRouter)
 
 // app.get('/api/info', (req, res) => {
 //   res.send({ application: 'Sunny_sample-app-2802', version: '1.0' });
