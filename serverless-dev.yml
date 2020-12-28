@@ -6,6 +6,10 @@ provider:
   stage: dev
   region: ap-south-1
   memorySize: 128 
+  environment:
+    MONGODB_URL: ${{ secrets.MONGODB_URL }}
+    SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+    JWT_SECRET: ${{ secrets.JWT_SECRET }}   
 functions:
   app:
     handler: app/app.handler
