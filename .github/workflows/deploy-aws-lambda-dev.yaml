@@ -33,7 +33,7 @@ jobs:
         run: mv serverless-dev.yml serverless.yml
       - name: Create env file
         run: | 
-          cat > env.yml << EOF
+          cat <<EOF >> env.js 
           ${{ secrets.ENV }}
           EOF        
       - name: Serverless Deploy
