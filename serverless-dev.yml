@@ -1,6 +1,6 @@
 service: serverless-CICD-Lambda-dev
 custom:
-    environment: ${file(env.yml):default}
+    environment: ${file(env.yml)}
 
 provider:
   name: aws
