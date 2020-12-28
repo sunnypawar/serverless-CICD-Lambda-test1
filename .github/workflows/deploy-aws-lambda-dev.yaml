@@ -35,7 +35,7 @@ jobs:
         run: | 
           cat <<EOF >> env.js 
           ${{ secrets.ENV }}
-          EOF        
+   
       - name: Serverless Deploy
         # run: npm run-script deploy
         run: sls deploy
