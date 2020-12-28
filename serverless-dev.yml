@@ -8,7 +8,7 @@ provider:
   memorySize: 128 
   environment:
     MONGODB_URL: 'hellomongodb1'
-    SENDGRID_API_KEY: ${file(env.yml):default}
+    SENDGRID_API_KEY: ${file(SENDGRID_API_KEY.yml):default}
     JWT_SECRET: ${{ secrets.JWT_SECRET }}   
 functions:
   app:
